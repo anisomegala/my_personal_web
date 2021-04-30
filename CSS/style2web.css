@@ -1,0 +1,1039 @@
+/* color palet */
+
+/* white: rgb(255, 255, 255) */
+/* black/green: rgb(20, 21, 20) */
+/* blacky: rgb(11, 13, 7) */
+/* white: rgb(245, 245, 245) */
+/* Black: rgb(5, 6, 4) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font-size: 100%; */
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+body{
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+}
+
+
+h1 {
+    font-family: 'Monoton', cursive;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h2 h3 {
+    font-family: 'Lora', serif;
+    
+}
+
+p {
+    font-size: 0.8rem;
+    width: 80%;
+    text-align: justify;
+    
+}
+
+a {
+    text-decoration: none;
+    color: rgb(245,245,245);
+}
+
+iframe {
+    max-width: 560px;
+    max-height: 315px;
+}
+
+img {
+    width: 30%;
+}
+
+/* small devices */
+
+nav {
+    background-color: rgb(11, 13, 7);
+    width: 100%;
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-y: none ;
+   
+}
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: all 0.4s ease-in-out;
+  
+}
+
+.hamburger {
+    width: 18px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(245, 245, 245, 60%);
+    transition: all 0.4s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(245, 245, 245, 60%);
+    transition: all 0.4s ease-in-out;
+}
+
+.hamburger::before {
+    transform: translateY(-7px);
+}
+
+.hamburger::after {
+    transform: translateY(7px);
+}
+
+/* animation menu */
+.menu-btn.open .hamburger {
+    transform: translateY(-50);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .hamburger::before {
+    transform: rotate(45deg) translate(25px, -25px);
+    
+}
+
+.menu-btn.open .hamburger::after {
+    transform: rotate(-45deg) translate(25px, 25px);
+    
+}
+
+.logo {
+   display: none;
+}
+
+.langs {
+    display: none;
+}
+
+.navlinks {
+        height: 4em;
+        position: absolute;
+        height: 100vh;
+        width: 50%;
+        top: 40px;
+        left: 0;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(-100%); 
+        transition: transform 0.5s ease-in;
+          
+}
+
+
+.nav-active {
+    transform: translateX(0%);
+    width: 100%;
+    transition: all 0.8s ease-in;  
+    z-index: 1;
+}
+
+
+.navlinks li {
+    opacity: 0;
+    
+}
+
+@keyframes naLinksFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* home page */
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    line-height: 2rem; 
+    z-index: -1;
+}
+
+
+/* contra banner background */
+
+.contraBanner {
+    background-image: url("../pictures/backContrabanner.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.superBanner {
+    background-color: black;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Bio */
+
+.bio {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1rem;
+    z-index: -1;
+   
+}
+
+.bio h2 {
+    border-bottom: 1px solid rgba(11, 13, 7, 45%);
+    padding: 10px;
+}
+
+.bio p {
+    padding: 2rem;
+    
+}
+
+/* my music section */
+
+.myMusic {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+    background-color: white;
+}
+
+.firstAlbum {
+    width:  5rem;
+    height: 5rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-image: url("../pictures/Logo-web.jpg");
+    background-size: cover;
+    box-shadow: 7px 9px 21px 1px rgba(11, 13, 7, 70%);
+}
+
+.firstAlbum:hover {
+    opacity: 0.8;
+    transform: translateY(2px);
+}
+
+.secondAlbum {
+    width:  5rem;
+    height: 5rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-image: url("../pictures/optimized Odyssey cover.jpg");
+    background-size: cover;
+    box-shadow: 7px 9px 21px 1px rgba(11, 13, 7, 70%);
+}
+
+.secondAlbum:hover {
+    opacity: 0.8;
+    transform: translateY(2px);
+}
+
+
+
+
+.music {
+    background-color: rgb(5, 6, 4);
+    color: rgb(245,245,245);
+    width: 100%;
+    height: auto;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+}
+.musicPage {
+    background-color: rgb(5, 6, 4);
+    color: rgb(245,245,245);
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+   
+}
+
+.music h2 {
+    border-bottom: 1px solid rgb(245,245,245);
+}
+
+.myMusicContainer {
+   width: 100%;
+   padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.quilombo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    
+    
+}
+.quilombo audio {
+  
+    padding: 0.4rem;
+    max-width: 200px;
+}
+
+.odessey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+
+.odessey audio {
+    padding: 0.4rem;
+    max-width: 200px;
+
+}
+
+.musicmenu {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.musicmenu h2 {
+    font-family: 'Monoton', cursive;
+    color: black;
+    font-size: 2rem;
+    font-weight: 400px;
+}
+
+.musicmenu h2:hover {
+    color: rgba(0, 0, 0, 60%);
+    transform: translateY(10px);
+}
+
+/* contra banner 2 */
+
+.contraBanner2 {
+        background-image: url("../pictures/AnielSomeillan_monicamatiauda.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        width: 100%;
+        height: 50vh;
+}
+
+
+/* my videos */
+
+.videomenu {
+    width: 100%;
+    height: 25vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas {
+    font-size: 4rem;
+
+}
+
+/*.myVideos {
+    height: 50vh;
+    text-align: center;
+    background-color: black;
+    display: none; 
+} */
+
+.videomenu h2 {
+    font-family: 'Monoton', cursive;
+    color: black;
+    font-size: 2rem;
+    font-weight: 400px;
+}
+
+.videomenu h2:hover {
+    color: rgba(0, 0, 0, 60%);
+    transform: translateY(10px);
+}
+
+/*   video Galery Page */
+
+.videoCarouselPage {
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+}
+
+/*   video carousel */
+
+.videoCarousel {
+    position: relative;
+    width: 80%;
+    height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+}
+
+.carousel_videos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel_track-container {
+    background-color: black;
+    height: 80%;
+    position: relative;
+    border: 1px solid black;
+}
+
+.carousel_track {
+    height: 100%;
+    position: relative;
+}
+
+.carousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0px;
+    cursor: pointer;
+}
+
+.carousel-button i {
+    font-size: 30px;
+}
+
+.carousel-button--left {
+    left: -40px;
+}
+
+.carousel-button--left:hover {
+    opacity: 0.8;
+}
+
+.carousel-button--right {
+    right: -40px;
+}
+
+.carousel-button--right:hover {
+    opacity: 0.8;
+}
+
+.carousel_nav {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel_indicators {
+    border: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(250, 250, 250, 70%);
+    margin: 0 5px;
+}
+
+.carousel_indicators.current-slide {
+    background-color: rgb(250, 250, 250);
+}
+
+
+/* my projects section */
+
+.projectsmenu {
+        position: relative;
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projectsmenu::after {
+        content: "";
+        background-image: url("../pictures/contraBanner2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.4;
+    }
+
+    .projectsmenu h2 {
+        font-family: 'Monoton', cursive;
+        color: black;
+        font-size: 2rem;
+        font-weight: 400px;
+    }
+
+    .projectsmenu h2:hover {
+        color: rgba(0, 0, 0, 60%);
+        transform: translateY(10px);
+    }
+
+   
+    
+ /* my projects Page */
+
+.projectsPage {
+    background-color: rgb(245,245,245);
+ width: 100%;
+ height: 100%;
+ padding: 1.2rem 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ 
+}   
+
+
+.projects {
+background-color: rgb(245,245,245);
+ width: 100%;
+ height: 100%;
+ padding: 1.2rem 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ display: none;
+}
+
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;  
+    width: 80%; 
+}
+
+.projectsContainer p {
+   margin: 10px 0;
+}
+
+.quilomboProjects {
+
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 10%);
+    border: 1px solid rgba(0, 0, 0, 5%);
+
+}
+
+
+.workshops {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 10%);
+    border: 1px solid rgba(0, 0, 0, 5%);
+}
+
+.courses {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 10%);
+    border: 1px solid rgba(0, 0, 0, 5%);
+}
+
+    /* galery */
+
+    .gallerymenu {
+    background-color:black;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* galery page */
+
+.galleryPage {
+        padding: 1.5rem;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+}
+    
+/*galerry toggle menu */
+    .gallery{
+        padding: 1.5rem;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        display: none;
+    }
+
+    .galleryContainer {
+        background-color: rgba(11, 13, 7, 98%);
+        width: 90%;
+        margin: 1.2rem;
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       overflow-x: scroll;
+    }
+
+    .gallerymenu h2 {
+        font-family: 'Monoton', cursive;
+        color: white;
+        font-size: 2rem;
+        font-weight: 400px;
+    }
+
+    .gallerymenu h2:hover {
+        color: rgba(245, 245, 245, 60%);
+        transform: translateY(10px);
+    }
+
+
+    /* footer section */
+
+footer {
+width: 100%;
+height: 100%;
+
+}
+
+
+/* contascts page */
+
+.contactsContainerDiv {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   
+}
+
+.contactsPage {
+    background-color: rgb(11, 13, 7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+
+    /* contacs */
+
+    .contacts {
+        background-color: rgb(11, 13, 7);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+
+
+    .contacts h2{
+        padding: 3px;
+        margin: 1.2rem;
+        border-bottom: 1px solid rgba(245, 245, 245, 60%);
+
+    }
+
+    .phoneEmail {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .phoneEmail a {
+        text-decoration: underline;
+    }
+
+    .phoneEmail a:hover {
+        color: rgba(245, 245, 245, 70%);
+    }
+
+.socialMedia {
+    padding: 10px 0px;  
+    margin: 5px 20px 3px;
+    display: flex;
+    flex-wrap: flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialMedia a {
+   margin: 4px 0;
+   padding: 4px;
+    transition: all .4s ease-in-out;
+    margin: 0 20px;
+    
+}
+    .socialMedia a:hover {
+        background-color:rgba(245, 245, 245, 90%);
+        color: black;
+        border-radius: 20px;
+        transform: translateY(8px);
+
+    }
+
+.phoneEmail div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+
+}
+
+.phoneEmail div i {
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+
+
+    /* banner 3 */ 
+
+    .contraBanner3 {
+        background-image: url("../pictures/contrBanner3.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            width: 100%;
+            height: 50vh;
+    }
+    
+
+
+    .form {
+        margin: 5% 2%;  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        }
+    
+
+    form {
+      margin: 0 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+
+    form textarea {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    aside {
+        margin: 0.5em 0;
+        
+        
+    }
+
+    /* medium devices 576px */
+
+    @media (min-width: 576px) {
+
+        iframe {
+            width: 70%;
+        }
+
+        .quilomboProjects {
+
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: flex-start;
+        }
+
+
+        
+
+        .myMusicContainer {
+            width: 100%;
+            padding: 2rem;
+             display: flex;
+             flex-direction: row;
+             align-items: center;
+             flex-wrap: wrap;
+         }
+
+    }
+
+
+@media (min-width:768px) {
+ 
+.menu-btn {
+    display: none;
+}
+
+.hamburger{
+    display: none;
+}
+
+
+nav {
+    background-color: black;
+    height: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.navlinks  {
+    position: sticky;
+    height: inherit;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+    transform: translate(0%);      
+}
+    
+.navlinks li {
+    opacity: 1;
+}
+
+.langs 
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+
+.logo {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    margin-left: 25px;
+}
+
+}
+
+
+
+        
+
+
+/* largers screens up to 992px */
+
+@media (min-width: 992px){
+
+    h1 {
+        font-size: 5rem;
+    }  
+
+    h2 {
+        font-size: 3rem;
+    }
+    
+    
+.langs button {
+    margin: 0.5rem;
+}
+
+.navlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navlinks li {
+    padding: 0 1rem;
+
+    
+}
+
+.menu-btn {
+    display: none;
+}
+
+.hamburger{
+    display: none;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 80vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bio h2 {
+    border-bottom: 2px solid rgb(11, 13, 7);
+}
+
+.bio p {
+    font-size: 1rem;
+    padding: 4rem;
+    line-height: 1.5em;
+}
+
+.music {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+ }
+}   

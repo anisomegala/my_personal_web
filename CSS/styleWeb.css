@@ -1,0 +1,258 @@
+/* color palet */
+
+/* white: rgb(255, 255, 255) */
+/* black/green: rgb(20, 21, 20) */
+/* blacky: rgb(11, 13, 7) */
+/* white: rgb(245, 245, 245) */
+/* white: rgb(5, 6, 4) */
+/* fonts */
+/* font-family: 'Lora', serif; */
+/* font-family: 'Syne', sans-serif; */
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;    
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    width: 100%;
+
+}
+
+nav {
+    position: relative;
+    background-color: rgb(245, 245, 245);
+      
+}
+
+.line {
+    background-color: rgb(5, 6, 4);
+    width: 20px;
+    height: 3px;
+    margin: 3px;
+}
+
+.hamburger {
+   background-color:rgb(245, 245, 245);
+   position: absolute;
+   cursor: pointer;
+   left: 2%;
+   top:50%;
+   transform: translate(-5%, 50%);
+   z-index: 2;
+}
+
+
+.navlinks { 
+    position: fixed;
+    background-color: rgb(245, 245, 245);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    clip-path: circle(1000px at 10%);
+    -webkit-clip-path: circle(1000px at 10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    display: none;
+    
+}
+
+.navlinks.open {
+    clip-path: circle(1000px at 10%);
+    -webkit-clip-path: circle(1000px at 10%);
+    pointer-events: all;
+}
+
+ul {
+    list-style-type: none;
+    
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    
+}
+
+img {
+    width: 30%; 
+    height: auto;
+    
+    
+}
+
+/* animated banner h1 + h3*/
+
+header {
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+/* texts fonts and sizes */
+
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 3rem;
+}
+
+h2 h3 {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+}
+
+p {
+    font-family: 'Lora', serif;
+    font-size: 0.8rem;
+}
+
+audio {
+   width: 80%;
+}
+
+video {
+    max-width: 100%;
+}
+
+
+
+
+.banner {
+    text-align: center;
+    padding: 10%;
+}
+
+.bio {
+    background-color: rgb(5, 6, 4);
+    color: rgb(245, 245, 245);
+    text-align: center;
+    padding: 10%;
+    width: 100%;
+    height: 60%;
+}
+
+.music {
+    background-color:rgb(245, 245, 245);
+    text-align: center;
+    padding: 10%;
+    width: 100%;
+    height: auto;
+}
+
+.myMusicContainer {
+    background-color: black;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+
+}
+
+.myVideos {
+    width: 100%;
+    height: 80%;
+}
+
+/* projects section */
+
+.projects h2 {
+    text-align: center;
+    border-bottom: 2px solid black ;
+    padding: 1em;
+}
+
+.projects {
+    width: 100%;
+    height: auto;
+    padding: 0 1rem;
+}
+
+.projectsContainer {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+    flex-wrap: wrap;
+    flex: 2 1 100%;
+}
+
+/* divs inside projects */
+.projectsContainer div {
+    padding: 2rem;
+}
+
+
+/* foto gallery */
+
+.gallery  {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 0 1rem;
+}
+
+.gallery h2 {
+    padding: 0.5em 0;
+    border-bottom: 2px solid rgb(20, 21, 20);
+}
+
+/* gallery */
+
+.galleryContainer {
+    background-color: rgba(11, 13, 7, 98%);
+    padding: 1rem;
+    margin: 1rem;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: baseline;
+   align-content: space-between;   
+}
+
+
+/* footer section */
+
+footer{
+    width: 100%;
+
+}
+
+.contacts {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 10%;
+}
+
+.socialMedia {
+    width: 100%;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

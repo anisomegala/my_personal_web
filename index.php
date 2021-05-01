@@ -225,12 +225,12 @@
                     <textarea rows="10" cols="40" placeholder="message" name="message" required></textarea>
                 </div>
                 <input type="submit" name="submit" value="Submit"></input>
+
             </form>
         </section>
-    </footer>
-    <?php include 'partials/form_submit.php'; ?>
-    <?php include 'partials/footer.php'; ?>
-    <?php include 'partials/scripts.php'; ?>
+        <?php include 'partials/footer.php'; ?>
+        <?php include 'partials/scripts.php'; ?>
+        <?php formSubmit(); ?>
 </body>
 
 </html>

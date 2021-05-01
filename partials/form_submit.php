@@ -1,17 +1,21 @@
-<?php
+<?php include 'conectionsdb.php';
 
-if (isset($_POST['submit'])) {
+function formSubmit()
+{
+    if (isset($_POST['submit'])) {
 
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $connection = mysqli_connect('localhost', 'root', '', 'portafolio_db');
-    if (!$connection) {
-        die('Database connection failed');
-    }
-    $query = "INSERT INTO form_data(username, email) VALUES ('$username', '$email') ";
-    $result = mysqli_query($connection, $query);
+        global $connection;
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $about = $_POST['text_about'];
+        $message = $_POST['message'];
 
-    if (!$result) {
-        die("QUERY FAILED" . mysqli_error($connection));
+
+        $query = "INSERT INTO form_data('username', 'email', 'text_about', 'message') VALUES ('$username', '$email', '$about', '$message')";
+        $result = mysqli_query($connection, $query);
+
+        if (!$result) {
+            die("QUERY FAILED" . mysqli_error($connection));
+        }
     }
 }

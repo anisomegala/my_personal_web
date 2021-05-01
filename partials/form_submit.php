@@ -7,11 +7,11 @@ function formSubmit()
         global $connection;
         $username = $_POST['username'];
         $email = $_POST['email'];
-        $about = $_POST['text_about'];
+        $about = $_POST['about'];
         $message = $_POST['message'];
 
 
-        $query = "INSERT INTO form_data('username', 'email', 'text_about', 'message') VALUES ('$username', '$email', '$about', '$message')";
+        $query = "INSERT INTO formData(username, email, about, message) VALUES ('$username', '$email', '$about', '$message')";
         $result = mysqli_query($connection, $query);
 
         if (!$result) {

@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <?php include 'partials/head.php'; ?>
-
-</head>
+<?php include 'partials/conectionsdb.php'; ?>
+<?php include 'partials/form_submit.php'; ?>
+<?php formSubmit(); ?>
+<?php include 'partials/head.php'; ?>
 
 <body>
     <?php include 'partials/nav.php'; ?>
@@ -219,7 +216,7 @@
                 </div>
                 <div class="form_control">
                     <label for="about">About</label>
-                    <input type="text" id="about" placeholder="title" name="text_about">
+                    <input type="text" id="about" placeholder="title" name="about">
                 </div>
                 <div class="form_control">
                     <textarea rows="10" cols="40" placeholder="message" name="message" required></textarea>
@@ -230,7 +227,6 @@
         </section>
         <?php include 'partials/footer.php'; ?>
         <?php include 'partials/scripts.php'; ?>
-        <?php formSubmit(); ?>
 </body>
 
 </html>
